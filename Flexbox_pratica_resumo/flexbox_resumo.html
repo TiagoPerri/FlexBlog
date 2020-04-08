@@ -1,0 +1,105 @@
+<!--Dois diferentes grupos
+
+AS PROPRIEDADES MOSTRADAS ABAIXO SE APLICAM APENAS AO CONTAINER,NÃO AOS ITENS
+
+-display: flex //Define o elemento como um flex container, tornando os seus filhos flex-itens.
+
+-flex-direction: column //Define a direção dos flex itens. Por padrão ele é row (linha), por isso quando o display: flex; é adicionado, os elementos ficam em linha, um do lado do outro.
+A mudança de row para column geralmente acontece quando estamos definindo os estilos em media queries para o mobile. Assim você garante que o conteúdo seja apresentado em coluna única.
+row-reverse e column-reserve é a ordem invertida; EX: 3-2-1
+
+*Flexbox não quebra palavras
+
+-flex-wrap: wrap //Define se os itens devem quebrar ou não a linha. Por padrão eles não quebram linha, isso faz com que os flex itens sejam compactados além do limite do conteúdo.
+Essa é geralmente uma propriedade que é quase sempre definida como flex-wrap: wrap; Pois assim quando um dos flex itens atinge o limite do conteúdo, o último item passa para a coluna debaixo e assim por diante.
+*wrap-reserve quebra a linha de baixo pra cima
+
+-flex-flow: row wrap  // é um atalho para as propriedades flex-direction e flex-wrap. Você não verá muito o seu uso, pois geralmente quando mudamos o flex-direction para column, mantemos o padrão do flex-wrap que é nowrap.
+E quando mudamos o flex-wrap para wrap, mantemos o padrão do flex-direction que é row.
+
+-justify-content: flex-start // Alinha os itens flex no container de acordo com a direção. A propriedade só funciona se os itens atuais não ocuparem todo o container. Isso significa que ao definir flex: 1; ou algo similar nos itens, a propriedade não terá mais função
+*Excelente propriedade para ser usada em casos que você deseja alinhar um item na ponta esquerda e outro na direita, como em um simples header com marca e navegação.
+*flex-start alinha os itens no início do container
+*flex-end alinha no final do container
+*center alinha no centro do container
+*space-between cria um espaçamento igual entre os elementos, primeiro grudado no inicio segundo no final por exemplo
+*space-around espaçamento entre os elementos, os do meio sao duas vezes maiores que o do inicio e do final
+
+
+AS PROPRIEDADES MOSTRADAS ABAIXO SE APLICAM APENAS AOS ITENS,NÃO AO CONTAINER
+-->
+
+<html>
+    <head>
+        <title>Teste flexbox</title>
+
+        <style>
+
+            section{
+                max-width: 40%;
+                margin: 0 auto;
+                padding: 5px;
+                border: 1px solid black;
+            }
+            div{
+                background-color: aqua;
+                border: 1px solid green;
+                text-align: center;
+                padding: 5px;
+            }
+
+            .flex{
+                display: flex;
+            }
+
+            .flex2{
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .flex3{
+                display: flex;
+                max-width: 200px;
+                flex-wrap: wrap;
+            }
+            .flex3 div{
+                flex: 1;
+            }
+
+            
+        </style>
+    </head>
+
+    <body>
+        <section class="flex">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </section>
+        <hr>
+        <section class="flex2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </section>
+        <hr>
+        <section class="flex3">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </section>
+        <hr>
+        
+    </body>
+</html>
