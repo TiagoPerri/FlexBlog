@@ -1,28 +1,100 @@
-/*Resetando estilos*/
-
-* {
-    box-sizing: border-box;
+.info{
+    background-color: #122ab2;
 }
 
-body,h1,h2,p,ul,li,a{
-    margin: 0;
-    padding: 0;
+.info_content{
+    max-width: 960px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+    padding-top: 10px;
 }
 
-body{
-    font-family: 'Nunito', 'Sans-Serif';
-    color: #222222;
+.info_content p, .info_content a{
+    text-decoration: none;
+    color: white;
+    margin: 0 10px 10px 10px;
 }
 
-ul{
-    list-style: none;
+.header{
+    background-color: #2c70ff;
 }
 
-a{
+.menu{
+    max-width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; /*Garante que menu fique sempre alinhado ao centro em relação ao eixo Y*/
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.menu a{
+    color: white;
     text-decoration: none;
 }
 
-img{
+.logo{
+    font-size: 2.25em;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.menu__nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menu__nav a{
+    font-weight: bold;
+    font-size: 1.25em;
     display: block;
-    max-width: 100%;
+    padding: 10px;
+}
+
+.menu__nav a:hover{
+    color: #122ab2;
+}
+
+.introducao{
+    line-height: 1;
+    font-size: 3em;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 10px;
+}
+
+.sobre{
+    border-top: 2px solid #2c70ff;
+    border-bottom: 2px solid #2c70ff;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sobre_info{
+    flex: 2 1 300px;
+    margin: 0 10px;
+}
+
+.sobre_info h1{
+    font-size: 3em;
+    margin-bottom: .5em;
+}
+
+.sobre_info p{
+    font-size: 1.25em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    color: #7c7c7c;
+}
+
+.sobre_img{
+    flex: 1 1 160px;
+    margin: 0 10px;
 }
